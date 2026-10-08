@@ -1,0 +1,621 @@
+// Ascension of Ages - FTB Quests theme.
+// Loaded by ThemeLoader as ftbquests:ftb_quests_theme.txt (verified in
+// ftb-quests-neoforge-2101.1.34.jar). Shipped through the KubeJS resource
+// pack at kubejs/assets/ftbquests/. Reloads live with F3+T.
+//
+// Selector syntax: [*] all, [#tag] by quest tag, [<HEX_ID>] by quest-object id.
+// A chapter-id block styles that chapter's canvas: background and dependency
+// lines. Quest NODE colors stay global by role tag, so a quest reads the same
+// way in every age. Per-chapter blocks must never set a quest_*_color.
+//
+// Every texture path below was verified present in the vanilla 1.21.1 client
+// jar or in the exact installed mod jar. Do not add a path without checking it.
+// NOTE: extra_quest_shapes does not exist in FTBQ 2101.1.34. Shapes are
+// auto-discovered from assets/ftbquests/textures/shapes/<name>/background.png.
+
+
+// ===========================================================================
+// GLOBAL
+// ===========================================================================
+[*]
+chapter_panel_background:         hollow_rectangle:#2A2E36; round_edges + #C8121419; padding=1
+selected_chapter_highlight_1:     #60C9A227
+selected_chapter_highlight_2:     #28C9A227
+dependency_line_thickness:        0.20
+dependency_line_selected_speed:   1.0
+dependency_line_unselected_speed: 0.35
+
+
+// ===========================================================================
+// QUEST ROLE COLORS - GLOBAL, DO NOT OVERRIDE PER CHAPTER
+// CQA's QuestButtonMixin reads these FTBQ per-quest theme colors, then adds
+// hover animation and glow. CQA 1.2.0.4 has no independent role-color config.
+// ===========================================================================
+[#aoa_main]
+quest_not_started_color: #C89632
+quest_started_color: #FFAA00
+
+[#aoa_side]
+quest_not_started_color: #9B59B6
+quest_started_color: #FF55FF
+
+[#aoa_boss]
+quest_not_started_color: #B03A2E
+quest_started_color: #FF5555
+
+
+// ===========================================================================
+// JOURNEY TO ASCENSION (table of contents)
+// ===========================================================================
+
+// journey_to_ascension
+[5350010000000001]
+background:                        minecraft:textures/block/calcite.png; color=#FF262A32; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #64DC64
+dependency_line_uncompleted_color: #B4CCA3A3
+dependency_line_unavailable_color: #64CCA3A3
+widget_border:                     #1B1D1E
+quest_view_title:                  #C8CCD4
+
+// ===========================================================================
+// DARK AGES  -  torchlit stone
+// ===========================================================================
+
+// stone_water_weather_and_wounds
+[3400000000001000]
+background:                        minecraft:textures/block/cobblestone.png; color=#FF4A4038; tile_size=48
+dependency_line_texture:           minecraft:textures/block/campfire_fire.png
+dependency_line_completed_color:   #E08428
+dependency_line_uncompleted_color: #B4806048
+dependency_line_unavailable_color: #64604840
+widget_border:                     #1A150F
+quest_view_title:                  #C9A98A
+
+// stone_food_and_farming_pressures
+[3400000000001400]
+background:                        minecraft:textures/block/cobblestone.png; color=#FF4A4038; tile_size=48
+dependency_line_texture:           minecraft:textures/block/campfire_fire.png
+dependency_line_completed_color:   #E08428
+dependency_line_uncompleted_color: #B4806048
+dependency_line_unavailable_color: #64604840
+widget_border:                     #1A150F
+quest_view_title:                  #C9A98A
+
+// entering_the_iron_era
+[620C470E078B2F83]
+background:                        minecraft:textures/block/cobblestone.png; color=#FF4A4038; tile_size=48
+dependency_line_texture:           minecraft:textures/block/campfire_fire.png
+dependency_line_completed_color:   #E08428
+dependency_line_uncompleted_color: #B4806048
+dependency_line_unavailable_color: #64604840
+widget_border:                     #1A150F
+quest_view_title:                  #C9A98A
+
+// ===========================================================================
+// MEDIEVAL TIMES  -  forge iron
+// ===========================================================================
+
+// m1_first_mill
+[7A1F000000000000]
+background:                        minecraft:textures/block/stone_bricks.png; color=#FF5F5852; tile_size=48
+dependency_line_texture:           minecraft:textures/block/lava_still.png
+dependency_line_completed_color:   #FF9E3D
+dependency_line_uncompleted_color: #B4907058
+dependency_line_unavailable_color: #64705848
+widget_border:                     #1E1A16
+quest_view_title:                  #D8C0A0
+
+// m2_hearth_and_homestead
+[1A26071700000300]
+background:                        minecraft:textures/block/stone_bricks.png; color=#FF5F5852; tile_size=48
+dependency_line_texture:           minecraft:textures/block/lava_still.png
+dependency_line_completed_color:   #FF9E3D
+dependency_line_uncompleted_color: #B4907058
+dependency_line_unavailable_color: #64705848
+widget_border:                     #1E1A16
+quest_view_title:                  #D8C0A0
+
+// m3_relics_and_burrows
+[4B2D3C5E8F7A0501]
+background:                        minecraft:textures/block/stone_bricks.png; color=#FF5F5852; tile_size=48
+dependency_line_texture:           minecraft:textures/block/lava_still.png
+dependency_line_completed_color:   #FF9E3D
+dependency_line_uncompleted_color: #B4907058
+dependency_line_unavailable_color: #64705848
+widget_border:                     #1E1A16
+quest_view_title:                  #D8C0A0
+
+// metallurgy
+[2902E58DB70F942F]
+background:                        minecraft:textures/block/stone_bricks.png; color=#FF5F5852; tile_size=48
+dependency_line_texture:           minecraft:textures/block/lava_still.png
+dependency_line_completed_color:   #FF9E3D
+dependency_line_uncompleted_color: #B4907058
+dependency_line_unavailable_color: #64705848
+widget_border:                     #1E1A16
+quest_view_title:                  #D8C0A0
+
+// minecolonies
+[0E21FB2EFB41A583]
+background:                        minecraft:textures/block/mud_bricks.png; color=#FF6B5A46; tile_size=48
+dependency_line_texture:           minecraft:textures/block/lava_still.png
+dependency_line_completed_color:   #C98F5A
+dependency_line_uncompleted_color: #B4A08868
+dependency_line_unavailable_color: #64705C4C
+widget_border:                     #2A211A
+quest_view_title:                  #D8BC96
+
+// ===========================================================================
+// THE RENAISSANCE  -  parchment and alchemy
+// ===========================================================================
+
+// ren_observation_experimentation
+[0B03001000000008]
+background:                        minecraft:textures/block/sandstone.png; color=#FFD8C9A3; tile_size=48
+dependency_line_texture:           theurgy:textures/block/sal_ammoniac/still.png
+dependency_line_completed_color:   #4E8C6A
+dependency_line_uncompleted_color: #B45A4A38
+dependency_line_unavailable_color: #645A4A38
+widget_border:                     #3A2E1F
+quest_view_title:                  #4A3A28
+
+// ren_harvest_and_hearth
+[1A26071700000400]
+background:                        minecraft:textures/block/sandstone.png; color=#FFD8C9A3; tile_size=48
+dependency_line_texture:           theurgy:textures/block/sal_ammoniac/still.png
+dependency_line_completed_color:   #4E8C6A
+dependency_line_uncompleted_color: #B45A4A38
+dependency_line_unavailable_color: #645A4A38
+widget_border:                     #3A2E1F
+quest_view_title:                  #4A3A28
+
+// ren_second_mill_steam_rail_logistics
+[0B0310B000000001]
+background:                        minecraft:textures/block/sandstone.png; color=#FFD8C9A3; tile_size=48
+dependency_line_texture:           theurgy:textures/block/sal_ammoniac/still.png
+dependency_line_completed_color:   #4E8C6A
+dependency_line_uncompleted_color: #B45A4A38
+dependency_line_unavailable_color: #645A4A38
+widget_border:                     #3A2E1F
+quest_view_title:                  #4A3A28
+
+// ren_magic_foundations
+[0B03001000000001]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ren_spectrum_academy
+[0B0310C000000000]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ren_the_dark_curriculum
+[5DC5000000000000]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ren_starlight_observation
+[0B03001000000004]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ren_aether_literacy
+[0B03001000000003]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ren_end_threshold
+[0B03001000000009]
+background:                        minecraft:textures/block/sandstone.png; color=#FFC9BFA8; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #7A5FA8
+dependency_line_uncompleted_color: #B4544070
+dependency_line_unavailable_color: #64443858
+widget_border:                     #332844
+quest_view_title:                  #5A4A7A
+
+// ===========================================================================
+// INDUSTRIAL REVOLUTION  -  blueprint and steel
+// ===========================================================================
+
+// ir_immersive_engineering_early_factory
+[4954010000000000]
+background:                        immersiveengineering:textures/block/metal/sheetmetal_steel.png; color=#FF52585E; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B48FA0AC
+dependency_line_unavailable_color: #6470787E
+widget_border:                     #1B2226
+quest_view_title:                  #B0C4D0
+
+// ir_ir_side_gear_hidden_equipment
+[49540D0000000000]
+background:                        immersiveengineering:textures/block/metal/sheetmetal_steel.png; color=#FF52585E; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B48FA0AC
+dependency_line_unavailable_color: #6470787E
+widget_border:                     #1B2226
+quest_view_title:                  #B0C4D0
+
+// ir_modern_industrialization_steam_industry
+[4954020000000000]
+background:                        modern_industrialization:textures/block/casings/bricked_steel.png; color=#FF6B5A4A; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #5FD0C0
+dependency_line_uncompleted_color: #B4A08870
+dependency_line_unavailable_color: #64705C4C
+widget_border:                     #241C16
+quest_view_title:                  #D0B89A
+
+// ir_create_industrial_addons
+[4954080000000000]
+background:                        minecraft:textures/block/blue_concrete.png; color=#FF23456B; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B47FA8C8
+dependency_line_unavailable_color: #64607C94
+widget_border:                     #0E2A47
+quest_view_title:                  #9FCBE8
+
+// ir_power_motion_and_grid
+[4954050000000000]
+background:                        minecraft:textures/block/blue_concrete.png; color=#FF23456B; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B47FA8C8
+dependency_line_unavailable_color: #64607C94
+widget_border:                     #0E2A47
+quest_view_title:                  #9FCBE8
+
+// ir_pneumaticcraft_pressure_plastic
+[4954060000000000]
+background:                        minecraft:textures/block/blue_concrete.png; color=#FF23456B; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B47FA8C8
+dependency_line_unavailable_color: #64607C94
+widget_border:                     #0E2A47
+quest_view_title:                  #9FCBE8
+
+// ir_automation_safety_and_routing
+[49540A0000000000]
+background:                        minecraft:textures/block/blue_concrete.png; color=#FF23456B; tile_size=48
+dependency_line_texture:           create:textures/block/belt.png
+dependency_line_completed_color:   #4FC3F7
+dependency_line_uncompleted_color: #B47FA8C8
+dependency_line_unavailable_color: #64607C94
+widget_border:                     #0E2A47
+quest_view_title:                  #9FCBE8
+
+// ir_magic_feedstock_and_spectrum_network
+[49540B0000000000]
+background:                        minecraft:textures/block/deepslate_tiles.png; color=#FF3A4048; tile_size=48
+dependency_line_texture:           spectrum:textures/block/midnight_solution_still.png
+dependency_line_completed_color:   #7FA8C8
+dependency_line_uncompleted_color: #B4708098
+dependency_line_unavailable_color: #64505C6C
+widget_border:                     #141820
+quest_view_title:                  #9AAEC4
+
+// ir_netherite_citadel_obsidilith
+[49540C0000000000]
+background:                        minecraft:textures/block/deepslate_tiles.png; color=#FF3A4048; tile_size=48
+dependency_line_texture:           spectrum:textures/block/midnight_solution_still.png
+dependency_line_completed_color:   #7FA8C8
+dependency_line_uncompleted_color: #B4708098
+dependency_line_unavailable_color: #64505C6C
+widget_border:                     #141820
+quest_view_title:                  #9AAEC4
+
+// ir_undergarden_descent
+[0B03001000000005]
+background:                        minecraft:textures/block/deepslate_tiles.png; color=#FF3A4048; tile_size=48
+dependency_line_texture:           spectrum:textures/block/midnight_solution_still.png
+dependency_line_completed_color:   #7FA8C8
+dependency_line_uncompleted_color: #B4708098
+dependency_line_unavailable_color: #64505C6C
+widget_border:                     #141820
+quest_view_title:                  #9AAEC4
+
+// ir_deeper_darker_otherside
+[0B03001000000006]
+background:                        minecraft:textures/block/deepslate_tiles.png; color=#FF3A4048; tile_size=48
+dependency_line_texture:           spectrum:textures/block/midnight_solution_still.png
+dependency_line_completed_color:   #7FA8C8
+dependency_line_uncompleted_color: #B4708098
+dependency_line_unavailable_color: #64505C6C
+widget_border:                     #141820
+quest_view_title:                  #9AAEC4
+
+// ===========================================================================
+// GILDED AGE  -  deco gold
+// ===========================================================================
+
+// g1_the_golden_workshop
+[4757010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g2_the_refinery
+[5246010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g4_the_infinite_grid
+[4D4E010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g5_empire_of_iron
+[4D4F010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g6_circuits_and_current
+[4D50010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g_power_beyond_wires
+[5057010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF7A6428; tile_size=48
+dependency_line_texture:           mekanism:textures/liquid/energy.png
+dependency_line_completed_color:   #C9A227
+dependency_line_uncompleted_color: #B4A08840
+dependency_line_unavailable_color: #64705C30
+widget_border:                     #4A1F1F
+quest_view_title:                  #E8CE7A
+
+// g7_chartered_arcana
+[4341010000000000]
+background:                        minecraft:textures/block/gold_block.png; color=#FF6B5238; tile_size=48
+dependency_line_texture:           spectrum:textures/block/liquid_crystal_still.png
+dependency_line_completed_color:   #C98F27
+dependency_line_uncompleted_color: #B4907050
+dependency_line_unavailable_color: #64604838
+widget_border:                     #3A1A2E
+quest_view_title:                  #E0B888
+
+// ===========================================================================
+// ATOMIC  -  hazard and reactor
+// ===========================================================================
+
+// at1_nuclear_dawn
+[4E44010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// at2_the_periodic_table
+[5054010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// at3_chain_reaction
+[4348010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// at4_machine_soul
+[4D53010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// at5_threshold_of_war
+[5457010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// at7_chaos_convergence
+[4358010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// atomic_oritech_convergence
+[4F43010000000000]
+background:                        minecraft:textures/block/yellow_terracotta.png; color=#FF6B5F1E; tile_size=48
+dependency_line_texture:           createnuclear:textures/fluid/uranium_still.png
+dependency_line_completed_color:   #7CFF6B
+dependency_line_uncompleted_color: #B4C0B840
+dependency_line_unavailable_color: #6478702C
+widget_border:                     #3A3410
+quest_view_title:                  #F2C300
+
+// ===========================================================================
+// OTHERWORLDLY  -  void and starlight
+// ===========================================================================
+
+// ow1_launch_window
+[4C57010000000000]
+background:                        minecraft:textures/block/obsidian.png; color=#FF161C36; tile_size=48
+dependency_line_texture:           minecraft:textures/block/nether_portal.png
+dependency_line_completed_color:   #9FD8FF
+dependency_line_uncompleted_color: #B46878A8
+dependency_line_unavailable_color: #64485870
+widget_border:                     #0B0D1F
+quest_view_title:                  #B8D8F0
+
+// ow3_dragon_technology
+[4454010000000000]
+background:                        minecraft:textures/block/obsidian.png; color=#FF161C36; tile_size=48
+dependency_line_texture:           minecraft:textures/block/nether_portal.png
+dependency_line_completed_color:   #9FD8FF
+dependency_line_uncompleted_color: #B46878A8
+dependency_line_unavailable_color: #64485870
+widget_border:                     #0B0D1F
+quest_view_title:                  #B8D8F0
+
+// ow4_the_dyson_project
+[4C59010000000000]
+background:                        minecraft:textures/block/obsidian.png; color=#FF161C36; tile_size=48
+dependency_line_texture:           minecraft:textures/block/nether_portal.png
+dependency_line_completed_color:   #9FD8FF
+dependency_line_uncompleted_color: #B46878A8
+dependency_line_unavailable_color: #64485870
+widget_border:                     #0B0D1F
+quest_view_title:                  #B8D8F0
+
+// ow6_beyond_the_veil
+[4256010000000000]
+background:                        minecraft:textures/block/obsidian.png; color=#FF161C36; tile_size=48
+dependency_line_texture:           minecraft:textures/block/nether_portal.png
+dependency_line_completed_color:   #9FD8FF
+dependency_line_uncompleted_color: #B46878A8
+dependency_line_unavailable_color: #64485870
+widget_border:                     #0B0D1F
+quest_view_title:                  #B8D8F0
+
+// ===========================================================================
+// ASCENSION  -  radiant prism
+// ===========================================================================
+
+// asc1_the_table_of_infinities
+[5449010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc2_the_philosophers_dream
+[5044010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc3_the_impossible_machine
+[494D010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc4_singularity
+[5347010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc5_the_draconic_heart
+[4448010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc6_bosses_rise
+[4252010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
+
+// asc7_ascension
+[4153010000000000]
+background:                        minecraft:textures/block/amethyst_block.png; color=#FF2E2848; tile_size=48
+dependency_line_texture:           draconicevolution:textures/block/energy_core/stabilizer_beam.png
+dependency_line_completed_color:   #FFFFFF
+dependency_line_uncompleted_color: #B4A890D8
+dependency_line_unavailable_color: #64705C90
+widget_border:                     #1A1630
+quest_view_title:                  #E8DCFF
